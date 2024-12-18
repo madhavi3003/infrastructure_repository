@@ -9,7 +9,8 @@ pipeline {
                     sh """
                     terraform init
                     terraform plan
-                    terraform apply -y
+                    terraform apply -auto-approve
+
 
                     """
                 
