@@ -10,7 +10,7 @@ pipeline {
                     terraform init
                     terraform plan
                     terraform apply -auto-approve
-                    terraform destroy -auto-approve
+                    
                     """    
                 }
             }
@@ -20,7 +20,7 @@ pipeline {
                 script {
                     echo 'Hello, World!'  // Prints "Hello, World!" to the console
                     sh """
-                    eksctl create cluster --name deployment_cluster --version 1.28 --nodes=1 --node-type=t2.small --region eu-west-1
+                    eksctl create cluster --name deploymentcluster --version 1.28 --nodes=1 --node-type=t2.small --region eu-west-1
 
                     """    
                 }
