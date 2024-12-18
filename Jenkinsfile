@@ -2,10 +2,19 @@ pipeline {
     agent any  // Runs the pipeline on any available Jenkins agent
 
     stages {
-        stage('Hello World') {
+        stage('create infra') {
             steps {
                 script {
                     echo 'Hello, World!'  // Prints "Hello, World!" to the console
+                    sh """
+                    terraform init
+                    terraform plan
+                    terraform apply
+
+                    """
+                
+                    
+                    
                 }
             }
         }
