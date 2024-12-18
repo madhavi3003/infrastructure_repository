@@ -9,7 +9,7 @@ pipeline {
                     sh """
                     terraform init
                     terraform plan
-                    terraform apply
+                    terraform apply -y
 
                     """
                 
